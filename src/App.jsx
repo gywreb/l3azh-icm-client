@@ -1,5 +1,4 @@
-import Layout from "antd/lib/layout/layout";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Provider } from "react-redux";
 
 import AuthProvider from "./components/AuthProvider/AuthProvider";

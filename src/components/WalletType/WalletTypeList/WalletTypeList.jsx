@@ -71,7 +71,7 @@ const WalletTypeList = () => {
 
   useEffect(() => {
     dispatch(getWalletList());
-  }, []);
+  }, [dispatch]);
 
   const handleOpenAddWalletType = () => {
     setIsWalletTypeVisible(true);

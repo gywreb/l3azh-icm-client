@@ -22,7 +22,7 @@ const AuthProvider = () => {
 
   useEffect(() => {
     dispatch(getCurrent());
-  }, []);
+  }, [dispatch]);
 
   if (loading) return <AppLoader />;
   else
