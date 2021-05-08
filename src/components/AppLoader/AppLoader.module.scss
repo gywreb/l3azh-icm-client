@@ -1,0 +1,17 @@
+@import "../../config/appStyles.scss";
+
+.loader_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: $mainColor;
+}
+.loader_logo {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

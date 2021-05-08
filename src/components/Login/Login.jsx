@@ -5,13 +5,17 @@ import AppLogo from "../../assets/images/app-logo.png";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../store/auth/action";
+import { useHistory } from "react-router";
 
 const Login = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.auth);
+
   const onFinish = async (values) => {
-    dispatch(login(values));
+    dispatch(login(values, history));
   };
+
   return (
     <div className={styles.login}>
       <div span={24} className={styles.login_banner}>

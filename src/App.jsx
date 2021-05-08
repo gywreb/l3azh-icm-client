@@ -1,19 +1,14 @@
-import React from "react";
+import Layout from "antd/lib/layout/layout";
+import React, { useEffect, useState } from "react";
 import { Provider } from "react-redux";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import Login from "./components/Login/Login";
+
+import AuthProvider from "./components/AuthProvider/AuthProvider";
 import store from "./store/store";
 
 const App = () => {
   return (
     <Provider store={store}>
-      <Router>
-        <Switch>
-          <Route path="/" exact>
-            <Login />
-          </Route>
-        </Switch>
-      </Router>
+      <AuthProvider />
     </Provider>
   );
 };
