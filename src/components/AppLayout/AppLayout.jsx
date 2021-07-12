@@ -6,7 +6,7 @@ import AppHeader from "../AppHeader/AppHeader";
 
 const AppLayout = ({ children }) => {
   const history = useHistory();
-  const [current, setCurrent] = useState(ROUTES.walletType);
+  const [current, setCurrent] = useState(ROUTES.transactionType);
 
   const toggleSelectedMenu = (current) => {
     setCurrent(current.key);

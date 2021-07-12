@@ -8,7 +8,7 @@ export const LOGIN_FAILURE = "@AUTH/LOGIN_FAILURE";
 export const GET_CURRENT = "@AUTH/GET_CURRENT";
 export const LOGOUT = "@AUTH/LOGOUT";
 
-export const getCurrent = () => async (dispatch) => {
+export const getCurrent = (history) => async (dispatch) => {
   dispatch({ type: LOGIN_REQUEST });
   try {
     const token = window.localStorage.getItem("token");

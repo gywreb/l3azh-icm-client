@@ -22,7 +22,15 @@ export default function walletTypeReducer(state = initialState, action) {
       };
     }
     case walletTypeActions.UPDATE_WALLET_TYPE_SUCCESS: {
-      return { ...state, loading: false };
+      const updatedIndex = state.list.findIndex(
+        (walletType) => walletType.idWalletType === action.payload.id
+      );
+      let updatedList = [
+        ...state.list.slice(0, updatedIndex),
+        action.payload.updatedWallet,
+        ...state.list.slice(updatedIndex + 1),
+      ];
+      return { ...state, loading: false, list: [...updatedList] };
     }
     case walletTypeActions.DELETE_WALLET_TYPE_SUCCESS: {
       const filteredList = state.list.filter(

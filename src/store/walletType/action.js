@@ -63,7 +63,13 @@ export const updateWalletType = (payload) => async (dispatch) => {
       payload
     );
     console.log(data);
-    dispatch({ type: UPDATE_WALLET_TYPE_SUCCESS, payload: data.data });
+    dispatch({
+      type: UPDATE_WALLET_TYPE_SUCCESS,
+      payload: {
+        id: payload.idWalletType,
+        updatedWallet: data.data.updateObejct,
+      },
+    });
     notification.success({
       message: data.data.message,
       duration: 3,

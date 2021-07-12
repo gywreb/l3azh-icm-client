@@ -11,7 +11,7 @@ const PrivateRoute = ({ isAuth, children, ...routeProps }) => {
       <Route
         {...routeProps}
         render={() =>
-          isAuth || token ? <Redirect to={ROUTES.walletType} /> : children
+          isAuth || token ? <Redirect to={ROUTES.transactionType} /> : children
         }
       />
     );

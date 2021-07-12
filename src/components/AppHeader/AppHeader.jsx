@@ -3,7 +3,7 @@ import { Header } from "antd/lib/layout/layout";
 import React from "react";
 import Logo from "../../assets/images/app-logo.png";
 import styles from "./AppHeader.module.scss";
-import { WalletOutlined, TransactionOutlined } from "@ant-design/icons";
+import { TransactionOutlined } from "@ant-design/icons";
 import { ROUTES } from "../../constants/routes";
 import { appColor } from "../../constants/styles";
 import { useHistory } from "react-router";
@@ -27,12 +27,12 @@ const AppHeader = ({ toggleSelectedMenu, current }) => {
         defaultSelectedKeys={[current]}
         mode="horizontal"
       >
-        <Menu.Item
+        {/* <Menu.Item
           key={ROUTES.walletType}
           icon={<WalletOutlined color={appColor.mainColor} />}
         >
           QUẢN LÝ LOẠI VÍ
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item
           key={ROUTES.transactionType}
           icon={<TransactionOutlined color={appColor.mainColor} />}
