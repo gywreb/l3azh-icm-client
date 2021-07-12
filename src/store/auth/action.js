@@ -42,7 +42,7 @@ export const login = (payload, history) => async (dispatch) => {
     apiClient.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${data.data.token}`;
-    history.push("/walletType");
+    history.push(ROUTES.transactionType);
   } catch (error) {
     //console.log(error);
     const { data } = error.response;
